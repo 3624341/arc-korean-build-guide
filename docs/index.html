@@ -6,9 +6,10 @@
   <title>Arc 한국어 빌드 가이드</title>
   <meta name="description" content="Foundry로 Arc 테스트넷에 첫 Solidity 스마트 컨트랙트를 배포하는 초보자용 한국어 가이드">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="evidence.css">
 </head>
 <body>
-  <header class="topbar"><a class="brand" href="#top"><span>A</span>Arc 한국어 가이드</a><nav><a href="#prepare">준비</a><a href="#deploy">배포</a><a href="#troubleshoot">문제 해결</a></nav></header>
+  <header class="topbar"><a class="brand" href="#top"><span>A</span>Arc 한국어 가이드</a><nav><a href="#prepare">준비</a><a href="#deploy">배포</a><a href="#evidence">실제 검증</a><a href="#troubleshoot">문제 해결</a></nav></header>
   <main>
     <section class="hero" id="top">
       <div><p class="eyebrow">BEGINNER · 약 15분</p><h1>Arc 테스트넷에<br>첫 스마트 컨트랙트 배포하기</h1><p class="lede">Solidity 코드를 새로 작성하지 않고 Foundry 기본 예제인 Counter를 테스트하고 Arc 테스트넷에 올려봅니다.</p><div class="buttons"><a class="primary" href="#prepare">바로 시작하기 ↓</a><a class="secondary" href="https://docs.arc.io/arc/tutorials/deploy-on-arc" target="_blank" rel="noreferrer">공식 원문 ↗</a></div><p class="updated">2026년 8월 24일 기준 · 비공식 한국어 커뮤니티 가이드</p></div>
@@ -36,6 +37,7 @@ source .env</code></pre><h3>Explorer에 소스 코드 검증하기</h3><pre><cod
   --rpc-url $ARC_TESTNET_RPC_URL</code></pre><p>온체인 트랜잭션을 보내 숫자를 1 증가시킵니다.</p><pre><code>cast send $COUNTER_ADDRESS "increment()" \
   --rpc-url $ARC_TESTNET_RPC_URL \
   --private-key $PRIVATE_KEY</code></pre><div class="complete"><span>✓</span><h3>첫 Arc 컨트랙트 배포 완료</h3><p><a href="https://testnet.arcscan.app" target="_blank" rel="noreferrer">Arc Testnet Explorer ↗</a>에서 주소나 트랜잭션 해시를 검색할 수 있습니다.</p></div></section>
+        <section id="evidence" class="evidence"><p class="step">TESTED ON ARC</p><h2>직접 배포하고 온체인에서 검증했습니다</h2><p>이 가이드는 공식 문서의 단순 번역본이 아닙니다. 2026년 8월 25일 Foundry를 사용해 Counter 컨트랙트를 Arc Testnet에 직접 배포하고, 소스 코드 검증과 <code class="inline">increment()</code> 실행까지 완료했습니다.</p><div class="proof-grid"><div><small>NETWORK</small><strong>Arc Testnet</strong></div><div><small>CHAIN ID</small><strong>5042002</strong></div><div><small>RESULT</small><strong>0 → 1</strong></div><div><small>VERIFICATION</small><strong>Exact match</strong></div></div><div class="address-card"><small>VERIFIED CONTRACT</small><code>0x39C2A7F29F982596DbA5F8a830eCE6cFf6550401</code><a href="https://testnet.arcscan.app/address/0x39C2A7F29F982596DbA5F8a830eCE6cFf6550401" target="_blank" rel="noreferrer">Arcscan에서 확인 ↗</a></div><div class="address-card"><small>DEPLOYMENT TRANSACTION</small><code>0xfb46094eb099fb9bd80ede7e15dd2d714d1ce30498f578655aeed603f0db57b0</code><a href="https://testnet.arcscan.app/tx/0xfb46094eb099fb9bd80ede7e15dd2d714d1ce30498f578655aeed603f0db57b0" target="_blank" rel="noreferrer">트랜잭션 확인 ↗</a></div><figure><img src="assets/arc-contract-verified.png" alt="Arc Testnet Explorer에서 Exact match로 검증된 Counter 컨트랙트와 Solidity 소스 코드"><figcaption>Arc Testnet Explorer · Contract source code verified (exact match)</figcaption></figure><figure><img src="assets/arc-contract-details.png" alt="Arc Testnet Counter 컨트랙트 생성자와 성공한 배포 트랜잭션"><figcaption>Counter 컨트랙트 생성자와 성공한 배포 트랜잭션</figcaption></figure></section>
         <section id="troubleshoot"><p class="step">문제 해결</p><h2>막혔을 때 확인할 항목</h2><details><summary><code>foundryup: command not found</code></summary><p>터미널을 완전히 닫았다가 다시 열거나 설치 완료 화면의 <code>source</code> 명령을 실행하세요.</p></details><details><summary>배포 중 잔액 부족 오류가 나요</summary><p>Circle Faucet에서 Arc Testnet을 선택하고 테스트넷 USDC를 받았는지 확인하세요.</p></details><details><summary>환경변수가 비어 있다고 나와요</summary><p>현재 폴더에 <code>.env</code>가 있는지 확인하고 <code>source .env</code>를 다시 실행하세요.</p></details></section>
         <footer><strong>출처와 안내</strong><p>Arc 공식 “Deploy on Arc” 문서를 바탕으로 한국어 사용자가 따라가기 쉽도록 재구성한 비공식 커뮤니티 가이드입니다. 최신 사양은 항상 공식 문서를 우선하세요.</p><a href="https://docs.arc.io/arc/tutorials/deploy-on-arc" target="_blank" rel="noreferrer">공식 튜토리얼 ↗</a></footer>
       </article>
