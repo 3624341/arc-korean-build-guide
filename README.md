@@ -6,6 +6,29 @@
 [![Chain ID](https://img.shields.io/badge/Chain_ID-5042002-111820)](https://docs.arc.io/)
 [![Verification](https://img.shields.io/badge/Contract-Verified-18A957)](https://testnet.arcscan.app/address/0x39C2A7F29F982596DbA5F8a830eCE6cFf6550401)
 
+## Arc Korea Build Proof — Live Onchain App
+
+Arc Korea Build Proof is an open-source onchain registry where builders can publish a project name, public URL, and wallet address on Arc Testnet.
+
+* **Live app:** https://3624341.github.io/arc-korean-build-guide/build-proof/
+* **Korean build guide:** https://3624341.github.io/arc-korean-build-guide/
+* **Verified BuildProof contract:** https://testnet.arcscan.app/address/0x7619D52F4C7A516973ee58c362c59Fd79612D4DE
+* **Deployment transaction:** https://testnet.arcscan.app/tx/0x39a67dfdc64e3ea47b1936c26312333572066ccef17337533bc9d00c7bdc787b
+* **First onchain project registration:** https://testnet.arcscan.app/tx/0x9dd0e8898d1efd4dd60d8ccf7486f9240ba6323f69dd8121d934141e442ca7e1
+
+### What was built
+
+* EVM wallet connection and automatic Arc Testnet switching
+* Onchain project registration and public registry
+* Verified Solidity smart contract with exact-match source verification
+* Input validation for project names and HTTPS URLs
+* Five Foundry tests with `5 passed, 0 failed`
+* English builder interface with Korean community context
+* Public Arcscan links for independent verification
+
+The first registered project is the Arc Korean Build Guide. This project is an unofficial community initiative focused on building, documentation, testing, and Korean developer onboarding. It does not provide rewards, trading tools, or price speculation.
+
+
 ## Live guide
 
 **https://3624341.github.io/arc-korean-build-guide/**
