@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="An open onchain registry for projects built on Arc Testnet." />
+  <title>Arc Korea Build Proof</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <nav><a class="brand" href="./"><span>A</span>Arc Korea <b>Build Proof</b></a><button id="connect">Connect wallet</button></nav>
+  <main>
+    <section class="hero">
+      <div><p class="eyebrow">● LIVE BUILDER TOOL · ARC TESTNET</p><h1>Prove what you<br />build on Arc.</h1><p class="lede">Register your project name, public URL, and builder wallet onchain. An open registry built in Korea for anyone shipping on Arc.</p><a class="primary" href="#register">Register a build ↘</a></div>
+      <div class="proof"><p>BUILD PROOF <i>● ARC</i></p><div class="check">✓</div><small>NETWORK</small><h2>Arc Testnet</h2><dl><div><dt>CHAIN ID</dt><dd>5042002</dd></div><div><dt>RECORD TYPE</dt><dd>Onchain</dd></div></dl></div>
+    </section>
+    <section class="stats"><div><small>NETWORK</small><b>● Arc Testnet</b></div><div><small>CONTRACT</small><a target="_blank" href="https://testnet.arcscan.app/address/0x7619D52F4C7A516973ee58c362c59Fd79612D4DE">0x7619…D4DE ↗</a></div><div><small>RECORDS</small><b id="count">—</b></div><div><small>STATUS</small><b id="status">Reading Arc Testnet…</b></div></section>
+    <section id="register" class="register"><div><p class="eyebrow">01 · REGISTER</p><h2>Turn shipped work into an onchain record.</h2><p>Only public project information is stored. Never enter private keys or seed phrases.</p></div><form id="form"><label>PROJECT NAME<input id="name" maxlength="64" placeholder="e.g. Arc Korean Build Guide" required /></label><label>PUBLIC PROJECT URL<input id="url" type="url" maxlength="200" placeholder="https://github.com/…" required /></label><button type="submit">Register on Arc Testnet ↗</button></form></section>
+    <section class="registry"><header><div><p class="eyebrow">02 · PUBLIC REGISTRY</p><h2>Latest build proofs</h2></div><button id="refresh">Refresh ↻</button></header><div id="projects" class="projects"><p class="empty">Loading verified onchain records…</p></div></section>
+    <section class="about"><h2>Built in Korea.<br />Open to every Arc builder.</h2><div><p><b>Arc Korea Build Proof</b> is an independent open-source project for publishing verifiable work built on Arc Testnet.</p><p>한국의 초보 빌더도 Arc에서 만든 결과물을 직접 온체인에 기록하고 공유할 수 있도록 만든 오픈소스 도구입니다.</p><p class="links"><a target="_blank" href="https://testnet.arcscan.app/address/0x7619D52F4C7A516973ee58c362c59Fd79612D4DE">Verified contract ↗</a><a target="_blank" href="https://testnet.arcscan.app/tx/0x39a67dfdc64e3ea47b1936c26312333572066ccef17337533bc9d00c7bdc787b">Deployment transaction ↗</a></p></div></section>
+  </main>
+  <footer>Unofficial community project · Arc Testnet only</footer>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
