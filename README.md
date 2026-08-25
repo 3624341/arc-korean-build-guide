@@ -4,7 +4,7 @@
 
 [![Arc Testnet](https://img.shields.io/badge/Network-Arc_Testnet-116BFF)](https://testnet.arcscan.app/)
 [![Chain ID](https://img.shields.io/badge/Chain_ID-5042002-111820)](https://docs.arc.io/)
-[![Verification](https://img.shields.io/badge/Contract-Verified-18A957)](https://testnet.arcscan.app/address/0x39C2A7F29F982596DbA5F8a830eCE6cFf6550401)
+[![BuildProof Verification](https://img.shields.io/badge/BuildProof-Verified-18A957)](https://testnet.arcscan.app/address/0x7619D52F4C7A516973ee58c362c59Fd79612D4DE)
 
 ## Arc Korea Build Proof — Live Onchain App
 
