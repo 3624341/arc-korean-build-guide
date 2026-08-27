@@ -90,6 +90,30 @@ cast send "$COUNTER_ADDRESS" "increment()" \
   --rpc-url "$ARC_TESTNET_RPC_URL" \
   --account arc-deployer
 ```
+## Arc Doctor
+
+Arc Doctor is a small open-source diagnostic tool for checking an Arc Testnet
+development environment before deployment. It checks WSL, required commands,
+the configured RPC, Arc Testnet chain ID, optional wallet balance, and Foundry
+project tests without reading a private key, seed phrase, or keystore password.
+
+Run it from the repository root after loading the RPC environment variable:
+
+```bash
+source .env
+bash scripts/arc-doctor.sh foundry
+```
+
+To include a public wallet balance check, provide only the public address:
+
+```bash
+ARC_WALLET_ADDRESS="0xYourPublicAddress" \
+  bash scripts/arc-doctor.sh foundry
+```
+
+`Result: READY` means all required checks passed. `Result: NOT READY` lists the
+checks that need attention. Never enter a private key, seed phrase, or password
+into Arc Doctor.
 
 ## Repository structure
 
