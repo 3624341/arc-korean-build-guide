@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Arc Testnet RPC, chain ID, latest block, and gas price live monitor." />
+  <title>Arc Testnet Live Monitor</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <nav>
+    <a class="brand" href="../"><span>A</span>Arc Korea <b>Live Monitor</b></a>
+    <a class="guide-link" href="../">한국어 가이드 ↗</a>
+  </nav>
+
+  <main>
+    <header class="intro">
+      <div>
+        <p class="eyebrow">ARC TESTNET · LIVE RPC DATA</p>
+        <h1>Know the network<br />before you build.</h1>
+      </div>
+      <div class="intro-copy">
+        <p>Arc Testnet RPC에서 직접 읽은 최신 네트워크 상태입니다. 지갑 연결, 로그인, 개인정보 입력 없이 사용할 수 있습니다.</p>
+        <button id="refresh" type="button">Refresh data ↻</button>
+      </div>
+    </header>
+
+    <section class="status-panel" aria-live="polite">
+      <div id="network-state" class="network-state" data-state="checking">CHECKING · Arc RPC 연결 확인 중</div>
+      <div class="pulse" aria-hidden="true"><i></i><i></i><i></i></div>
+    </section>
+
+    <section class="metrics">
+      <article><small>CHAIN ID</small><strong id="chain-id">—</strong><p>Expected: 5,042,002</p></article>
+      <article><small>LATEST BLOCK</small><strong id="block-number">—</strong><p>Arc RPC의 최신 블록</p></article>
+      <article><small>GAS PRICE</small><strong id="gas-price">—</strong><p>현재 네트워크 기준</p></article>
+      <article><small>BLOCK TIME</small><strong id="block-time">—</strong><p>최근 블록 생성 시각</p></article>
+    </section>
+
+    <section class="details">
+      <div>
+        <p class="eyebrow">NETWORK DETAILS</p>
+        <dl>
+          <div><dt>Network</dt><dd>Arc Testnet</dd></div>
+          <div><dt>RPC</dt><dd>rpc.testnet.arc.network</dd></div>
+          <div><dt>Gas token</dt><dd>USDC</dd></div>
+          <div><dt>Last checked</dt><dd id="updated-at">—</dd></div>
+        </dl>
+        <p id="error-message" class="error" role="status"></p>
+      </div>
+      <aside>
+        <p class="eyebrow">QUICK LINKS</p>
+        <a href="https://testnet.arcscan.app/" target="_blank" rel="noreferrer">Arc Testnet Explorer <span>↗</span></a>
+        <a href="https://docs.arc.io/" target="_blank" rel="noreferrer">Arc Documentation <span>↗</span></a>
+        <a href="../build-proof/">Arc Korea Build Proof <span>↗</span></a>
+      </aside>
+    </section>
+  </main>
+
+  <footer>Unofficial community developer tool · Data refreshes every 30 seconds</footer>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
