@@ -115,6 +115,28 @@ ARC_WALLET_ADDRESS="0xYourPublicAddress" \
 checks that need attention. Never enter a private key, seed phrase, or password
 into Arc Doctor.
 
+## Arc Testnet Live Monitor
+
+Arc Testnet Live Monitor is a public developer dashboard that reads live network data directly from the Arc Testnet RPC.
+
+**Live dashboard:**
+https://3624341.github.io/arc-korean-build-guide/network-status/
+
+### Live checks
+
+- Arc Testnet RPC connectivity
+- Chain ID validation (`5042002`)
+- Latest block number
+- Current gas price
+- Latest block timestamp
+- Block freshness status
+- Automatic refresh every 30 seconds
+
+The monitor does not require a wallet, login, backend, database, private key, or other sensitive information.
+
+Automated tests cover RPC response parsing, incorrect Chain ID rejection, block freshness classification, and the published Korean interface.
+
+
 ## Repository structure
 
 ```text
